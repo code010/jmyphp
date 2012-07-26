@@ -1,0 +1,6 @@
+<FilesMatch "^\.ht">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine off

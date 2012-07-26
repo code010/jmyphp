@@ -1,0 +1,20 @@
+<FilesMatch "^\.ht">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine on
+
+#SI QUIERO CREAR DIRECTORIO DENTRO DE PAGES HAY QUE PASARLO COMO PARAMETRO "f" POR GET. 
+#Ejemplo la administracion:
+RewriteRule ^admin/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)(/|)$ index.php?page=$1&val1=$2&val2=$3&val3=$4&val4=$5&f=admin
+RewriteRule ^admin/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)(/|)$ index.php?page=$1&val1=$2&val2=$3&val3=$4&f=admin
+RewriteRule ^admin/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)(/|)$ index.php?page=$1&val1=$2&val2=$3&f=admin
+RewriteRule ^admin/([a-zA-Z0-9_-]+)(/|)$ index.php?page=$1&f=admin
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)(/|)$ index.php?page=$1&val1=$2&val2=$3&val3=$4&val4=$5
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)(/|)$ index.php?page=$1&val1=$2&val2=$3&val3=$4
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)(/|)$ index.php?page=$1&val1=$2&val2=$3
+RewriteRule ^([a-zA-Z0-9_-]+)(/|)$ index.php?page=$1
+
+ErrorDocument 404 {APPPATH}error/

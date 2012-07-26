@@ -1,0 +1,313 @@
+/* CSS for admin theme */
+
+	/* TAGS */
+		* {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px;	
+		}
+		
+		a {
+			text-decoration: none;
+			color: #666;
+		}
+		a:hover {
+			text-decoration: underline;
+			color: #000;
+		}
+		html, body { height: 100%; margin: 0px; padding: 0px; }
+		body { 
+			background-color: #EEE; 
+		}
+		table, td, th, ul {
+			margin: 0px;
+			padding: 0px;
+			border: 0px;
+		}
+		textarea {
+			height: 100px;
+		}
+		input[type='text'], input[type='password'], textarea {
+			width: 200px;
+		}
+		input[type='text'], textarea, select {
+			padding: 2px;		
+		}
+		h1 {
+			margin: 0px;
+			padding: 5px;
+			font-size: 20px;
+			text-align: center;
+		}
+
+	/* Simple Header */
+		#login {
+			width: 220px;
+			margin: 10px auto;
+		}
+		#header {
+			padding: 10px 0px;
+			background-color: #EEE;
+			border-bottom: 1px solid #CCC;
+		}
+		#header h1 {
+			padding: 0px 10px 4px 10px;
+			text-align: left;			
+		}
+		#header h1 a {
+			font-size: 24px;
+			text-decoration: none;
+		}
+		#footer {
+			padding: 0px;
+			background-color: #EEE;
+			border-top: 1px solid #CCC;
+		}
+		#footer h6 {
+			margin: 6px 20px;
+			text-align: left;	
+			font-size: 10px;
+			font-weight: normal;
+			text-align: right;
+		}
+		
+		#main {
+			padding: 20px 0px;
+			background-color: #FFF;
+		}
+		#main h1{
+			margin-top: 20px;
+		}
+		
+		.menu li{
+			display: inline;
+			padding: 2px 10px;
+			border-right: 1px solid #CCC;
+		}
+		.menu li.last{
+			border-right: 0px;
+		}
+			
+		.userPanel {
+			float: right;
+			margin-right: 20px;
+		}	
+		
+	/* Simple message classes */
+		.simple_message {
+			display: none;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			width: 100%;
+			padding: 8px 0px;
+			opacity:0.8;
+			filter:alpha(opacity=80);
+			
+			font-size: 18px;
+			text-align: center;
+			font-weight: bold;
+		}
+		.red_message {
+			background-color: #F03030;
+			color: #FFF;
+		}
+		.green_message {
+			background-color: #30F030;
+			color: #FFF;
+		}
+		.blue_message {
+			background-color: #3030F0;
+			color: #FFF;
+		}
+
+	/* Simple Modal Window */
+		#modalWindow {
+			display: none;
+		    border: 1px solid #CCC;
+		    background-color: #EEE;
+		    position: absolute;
+		    left: 50%;
+		    top: 80px;
+		    z-index: 1000;
+	
+			-webkit-box-shadow: 0px 0px 20px 0px #CCC;
+			-moz-box-shadow: 0px 0px 20px 0px #CCC;
+			box-shadow: 0px 0px 20px 0px #CCC;  
+			
+			-moz-border-radius-topleft: 10px;
+			-moz-border-radius-topright: 0px;
+			-moz-border-radius-bottomright: 10px;
+			-moz-border-radius-bottomleft: 0px;
+			-webkit-border-radius: 10px 0px 10px 0px;
+			border-radius: 10px 0px 10px 0px; 
+			
+		    width: 600px;
+		    margin-left: -300px;
+		    padding-bottom: 10px;
+		}
+		#modalWindow h1 {
+			margin-top: 3px;
+			border-bottom: 1px solid #CCC;
+			text-align: left;
+		}
+		#modalWindow .tableData {
+			width: 100%;
+			margin: 0px auto;
+			padding: 10px 20px;
+		    background-color: #FFF;
+			border-bottom: 1px solid #CCC;
+			border-top: 20px solid #FFF;
+		}
+		#modalWindow .tableData  td.buttonsData {
+			padding: 10px 0px;
+			text-align: center;
+		}
+		#modalWindow .tableData  td.leftColData {
+			text-align: right;
+			width: 120px;
+			padding: 2px 3px;
+		}
+		#modalWindow #close {
+			float: right;
+		    margin-right: 5px;
+		    margin-top: -25px;
+		}
+
+	/* Simple Table List*/
+		.tableList {
+			background-color: #EEE;
+			width: 300px;
+			margin: 20px auto;
+			border: 1px solid #CCC;
+			
+			-moz-border-radius-topleft: 10px;
+			-moz-border-radius-topright: 0px;
+			-moz-border-radius-bottomright: 10px;
+			-moz-border-radius-bottomleft: 0px;
+			-webkit-border-radius: 10px 0px 10px 0px;
+			border-radius: 10px 0px 10px 0px; 
+		}
+		
+		.tableList table {
+			width: 100%;
+		}
+		.tableList th {
+			font-size: 18px;
+			padding: 5px;
+			border-bottom: 1px solid #CCC;
+			border-right: 1px solid #CCC;
+		}
+		.tableList tbody td {
+			font-size: 12px;
+			padding: 5px;
+			border-bottom: 1px solid #EEE;
+			background-color: #FFF;
+		}
+		.tableList thead th.last {
+			border-right: 0px;
+		}
+		.tableList th.last{
+			width: 38px;
+			text-align: center;
+		}
+
+	/* Simple Table List Pagination */	
+		#pagination { 
+			border: 0px; 
+			background-color: transparent;
+			border-top: 1px solid #CCC;
+		}
+		#pagination ul {
+			margin: 5px;
+			padding: 0px;
+			text-align: center;
+		}
+		#pagination li {
+			display: inline;
+			padding: 2px 8px 2px 4px;
+			border-right: 1px solid #CCC;
+		}
+		#pagination li.selected {
+			font-size: 14px;
+			font-weight: bold;
+		}
+		#pagination li.last { border: 0px; }
+
+	/* Simple Table Account */		
+		.tableAccount {
+			width: 300px;
+			margin: 10px auto;
+		}
+		.tableAccount td{
+			text-align: right;
+			padding: 2px;
+		}	
+
+	/* Simple Modules PAge */
+		#newModule {
+			background-color: #FFFFFF;
+			border: 1px solid #000000;
+			left: 50%;
+			margin-left: -400px;
+			margin-top: 20px;
+			padding: 0px;
+			position: absolute;
+			width: 215px;
+			height: 225px;
+		}
+		#newModule h1{
+		    background-color: #EEEEEE;
+			border-bottom: 1px solid #000000;
+			font-size: 18px;
+			padding: 5px;
+			margin: 0px;'
+		}
+		#newModule form{
+			margin: 5px;
+		}
+		
+	/* Simple style datepicker */
+		.datepck th, .datepicker tfoot td { background: #333; font: 10px/18px Verdana, Arial, Helvetica, sans-serif; }
+		.datepck th span, .datepicker tfoot td span { font-weight: bold; }
+		.datepck th, .datepicker tfoot a { color: #FFF; }
+		
+		.datepck {
+			z-index: 999999;
+			background-color: #FFF;
+			border: 5px solid #333;
+			padding: 0px;
+
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;			
+		}
+		.datepck { text-align: center; }
+		.datepck td,.datepck th { font-size: 12px; padding:2px;}
+		.datepck .over {
+			background-color: #333;
+			font-weight: bolder;
+			color: #FFF;
+		}
+		#fecha { width: 90px; }
+
+		.waiting {
+			opacity:0.4;
+			filter:alpha(opacity=40); /* For IE8 and earlier */
+			width:100%; height:100%; 
+			background-color:#333;
+			position: absolute; 
+			top: 0px; 
+			left: 0px;
+			z-index: 999999;
+		}
+		.waiting div{
+			width:300px; height:180px; 
+			position: absolute; 
+			top: 50%; 
+			left: 50%; 
+			color:#FFF;
+			margin-top: -90px;
+			margin-left: -150px; 
+			text-align:center; 
+			font-size:30px; 
+		}
