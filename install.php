@@ -65,7 +65,7 @@
 			unlink("install.sql");
 			
 			#CREO REGISTROS BASICOS
-			$aux_pass = simple_encrypt("m4l4b4rs",$valores[0]);
+			$aux_pass = simple_encrypt("jmyphp",$valores[0]);
 			mysql_query("INSERT INTO `".$_POST['dbpref']."user` (`id`, `name`, `surname`, `email`, `user`, `pass`, `level`, `comments`, `date_registration`, `active`, `last_pass_change`, `login_attempts`, `last_ip_connection`) 
 							VALUES (NULL, 'Admin', '', '".$_POST['admin_email']."', 'admin', '".$aux_pass."', '100', 'comments', CURRENT_TIMESTAMP, 'Y', '".date('Y-m-d')."', '0', '0.0.0.0');");
 							
